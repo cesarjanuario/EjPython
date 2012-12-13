@@ -23,12 +23,12 @@ def index(request):
     libros = Libro.objects.all()
     return render_to_response('galeria.html', context_instance=RequestContext(request,{'libros': libros}))
                         
-def nuevo_libro(request):
+def agregar(request):
     if request.method == 'POST':
         form = LibroForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/nuevo_libro')
+            return HttpResponseRedirect('/agregar')
     else:
         form = LibroForm()
     return render_to_response('agregar.html', context_instance=RequestContext(request,{'form': form}))
