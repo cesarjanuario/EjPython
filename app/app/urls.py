@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     url(r'^hola/$', 'demo.views.hola', name='hola'),
     url(r'^post/(\d{1,2})/$', 'demo.views.post', name='post'),
     url(r'^hora_actual/$', 'demo.views.hora_actual', name='hora_actual'),
-    url(r'^nuevo_libro/$', 'demo.views.nuevo_libro', name='nuevo_libro'),
+    url(r'^agregar/$', 'demo.views.agregar', name='agregar'),
     
     
     # Uncomment the admin/doc line below to enable admin documentation:
